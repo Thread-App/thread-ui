@@ -24,13 +24,14 @@ export const useComment = (postId: number) => {
             const payload = {
                 postId: postId,
                 content: content,
-                commentId: 0 // 0 nếu là comment trực tiếp vào bài post
+                commentId: null 
             };
+
+            console.log("Tạo comment mới: ", payload)
             const response = await postNewComment(payload);
             
             if (response.success) {
-                // Thay vì reload trang, ta thêm trực tiếp vào danh sách để UX mượt hơn
-                // Hoặc gọi lại fetchComments()
+                // reload, thêm trực tiếp vào danh sách để UX mượt hơn, Hoặc gọi lại fetchComments()
                 fetchComments();
                 return true;
             }

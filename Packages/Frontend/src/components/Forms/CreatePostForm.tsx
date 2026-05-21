@@ -80,6 +80,7 @@ const CreatePostForm = () => {
             setValue('Files', []);
         }
         console.log(response);
+        window.location.reload()
     };
 
     return (

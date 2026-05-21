@@ -7,7 +7,7 @@ type GetCommentProps = {
 }
 
 type PostNewCommentProps = {
-    commentId: number
+    commentId: number | null
     postId: number
     content: string
 }

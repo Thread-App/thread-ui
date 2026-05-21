@@ -9,13 +9,13 @@ namespace Backend.Models
 	{
 		public int CommentId { get; set; }
 		public required string Content { get; set; }
-		public int? ParentCommentId { get; set; }
+		public int? ParentCommentId { get; set; } = null;
 
 		public required string UserId { get; set; }
 		public int LikeCount { get; set; } = 0;
 
 
-		public required int PostId { get; set; }
+		public int? PostId { get; set; } = null;
 
 		public virtual Post? Post { get; set; }
 
