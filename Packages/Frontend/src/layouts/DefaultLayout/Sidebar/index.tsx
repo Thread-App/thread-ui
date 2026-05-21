@@ -37,13 +37,13 @@ export default function Sidebar() {
 
             <div className="flex-1 flex flex-col gap-8 h-full lex-1 justify-center">
                 <ActionButton icon={<Home />} ariaLabel="Home" to="/" variant="active" />
-                {/* <ActionButton icon={<Search />} ariaLabel="Search" to="/search" /> */}
+                <ActionButton icon={<Search />} ariaLabel="Search" to="/search" />
                 <ActionButton
                     icon={<Plus className="bg-zinc-100 rounded-lg p-1 w-8 h-8" />}
                     ariaLabel="Create Post"
                     onClick={() => console.log('Open Create Modal')}
                 />
-                {/* <ActionButton icon={<Heart />} ariaLabel="Activity" to="/activity" /> */}
+                <ActionButton icon={<Heart />} ariaLabel="Activity" to="/activity" />
                 <ActionButton icon={<User />} ariaLabel="Profile" to="/profile" />
             </div>
 
