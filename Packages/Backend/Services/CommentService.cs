@@ -28,6 +28,7 @@ namespace Backend.Services
 
 		public async Task<CommentResponse> CreateCommentAsync(CreateCommentRequest request)
 		{
+			//Mo len dum cai trinh duyet og
 			if (request.CommentId is null && request.PostId is null)
 			{
 				throw new BadHttpRequestException("CommentId or PostId is required");
@@ -44,7 +45,7 @@ namespace Backend.Services
 			{
 				UserId = userId,
 				Content = request.content,
-				CommentId = request.CommentId.Value,
+				ParentCommentId = request.CommentId.Value,
 				PostId = request.PostId.Value,
 			};
 
